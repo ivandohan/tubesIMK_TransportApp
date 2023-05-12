@@ -29,8 +29,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
     ];
 
     return Scaffold(
-        body: SafeArea(
-      child: Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
@@ -182,7 +181,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           ),
         ],
       ),
-    ));
+    );
   }
 }
 

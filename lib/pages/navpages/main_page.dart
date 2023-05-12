@@ -29,27 +29,29 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: pages[currentIndex],
-      bottomNavigationBar: BottomNavigationBar(
-        selectedFontSize: 0,
-        unselectedFontSize: 0,
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Colors.white,
-        onTap: onTap,
-        currentIndex: currentIndex,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
-        elevation: 0,
-        selectedItemColor: Colors.black54,
-        unselectedItemColor: Colors.grey.withOpacity(0.5),
-        items: const [
-          BottomNavigationBarItem(label: "Home", icon: Icon(Icons.apps)),
-          BottomNavigationBarItem(
-              label: "Bar", icon: Icon(Icons.bar_chart_sharp)),
-          BottomNavigationBarItem(label: "Search", icon: Icon(Icons.search)),
-          BottomNavigationBarItem(label: "Person", icon: Icon(Icons.person)),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: pages[currentIndex],
+        bottomNavigationBar: BottomNavigationBar(
+          selectedFontSize: 0,
+          unselectedFontSize: 0,
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: Colors.white,
+          onTap: onTap,
+          currentIndex: currentIndex,
+          showSelectedLabels: false,
+          showUnselectedLabels: false,
+          elevation: 0,
+          selectedItemColor: Colors.black54,
+          unselectedItemColor: Colors.grey.withOpacity(0.5),
+          items: const [
+            BottomNavigationBarItem(label: "Home", icon: Icon(Icons.apps)),
+            BottomNavigationBarItem(
+                label: "Bar", icon: Icon(Icons.bar_chart_sharp)),
+            BottomNavigationBarItem(label: "Search", icon: Icon(Icons.search)),
+            BottomNavigationBarItem(label: "Person", icon: Icon(Icons.person)),
+          ],
+        ),
       ),
     );
   }
